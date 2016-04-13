@@ -1,0 +1,20 @@
+Basic server structure, also launch order.
+
+These two can be launched in either order
+-------------------------------------------------------
+Global server is used to register realms and characters
+Auth server is used to authorize accounts
+
+Realm servers are many, they register themselves with the
+global server, with a name, flag and ip/socket
+Allows for multiple servers, and pretty good scalibility
+
+Instance server pooler is used in a similar way to
+the global server for realms. As instances come online
+they register with the instance server pooler
+Instance servers set their IP/URL, active status, and
+and users in the instance
+
+Instance servers are used to allow dungeons and raids,
+on startup they will register with the instance server
+pooler.
