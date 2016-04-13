@@ -1,4 +1,4 @@
-var io = require('socket.io')(3000);
+var io = require('socket.io')(2000);
 var sequence = 1;
 var clients = [];
 
